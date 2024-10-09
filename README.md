@@ -22,18 +22,28 @@ import { agnosticStyles } from 'agnostic-styles';
 window.agnosticStyles = agnosticStyles({ debugLog: true, debugWarn: false });
 ```
 
-### Example: Adding a Class
+### Example: Adding Classes
 
 ```javascript
 window.safeClassAdd = window.agnosticStyles('addClass', 'rounded-full');
 safeClassAdd('element-id');  // Adds the 'rounded-full' class to the element with ID 'element-id'
 ```
+-or-
+```javascript
+window.safeClassAdd = window.agnosticStyles('addClass', ['someClass', 'anotherClass', 'moreClasses']);
+safeClassAdd('element-id');  // Adds 'someClass', 'anotherClass', and 'moreClasses' classes to the element with ID 'element-id'
+```
 
-### Example: Removing a Class
+### Example: Removing Classes
 
 ```javascript
 window.safeClassRemove = window.agnosticStyles('removeClass', 'rounded-full');
 safeClassRemove('element-id');  // Removes the 'rounded-full' class from the element with ID 'element-id'
+```
+-or-
+```javascript
+window.safeClassAdd = window.agnosticStyles('removeClass', ['someClass', 'anotherClass', 'moreClasses']);
+safeClassAdd('element-id');  // Removes 'someClass', 'anotherClass', and 'moreClasses' classes from the element with ID 'element-id'
 ```
 
 ### Example: Setting Inline Styles
@@ -45,7 +55,7 @@ safeStyleChange('element-id');  // Sets the background color to red on the eleme
 -or-
 ```javascript
 window.safeStyleChange = window.agnosticStyles('setStyle', { borderRadius: '50px' });
-safeStyleChange('element-id');  // Sets the background color to red on the element with ID 'element-id'
+safeStyleChange('element-id');  // Sets border-radius to 50px on the element with ID 'element-id'
 ```
 
 ### Example: Removing Inline Styles
@@ -57,7 +67,7 @@ safeStyleRemove('element-id');  // Removes the background color style from the e
 -or-
 ```javascript
 window.safeStyleRemove = window.agnosticStyles('removeStyle', ['border-radius']);
-safeStyleRemove('element-id');  // Removes the background color style from the element with ID 'element-id'
+safeStyleRemove('element-id');  // Removes the border-radius style from the element with ID 'element-id'
 ```
 
 ## Debug Options

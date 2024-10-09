@@ -1,10 +1,10 @@
 /**
- * AgnosticCSS Type Definitions
+ * AgnosticStyles Type Definitions
  *
- * Provides TypeScript type definitions for the AgnosticCSS utility.
+ * Provides TypeScript type definitions for the AgnosticStyles utility.
  */
 
-interface AgnosticCSSOptions {
+interface AgnosticStylesOptions {
   debugLog?: boolean;
   debugWarn?: boolean;
 }
@@ -16,9 +16,9 @@ type CSSStyles = {
 };
 
 /**
- * The main AgnosticCSS function.
+ * The main AgnosticStyles function.
  *
  * @param options - Optional debugging options.
  * @returns A function that takes an action and a value.
  */
-export function agnosticCSS(options?: AgnosticCSSOptions): (action: Action, value: string | string[] | CSSStyles) => (elementId: string) => void;
+export function agnosticStyles(options?: AgnosticStylesOptions): (action: Action, value: string | string[] | CSSStyles) => (elementId: string) => void;

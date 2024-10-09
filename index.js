@@ -1,7 +1,7 @@
 /**
- * AgnosticCSS 0.1.12
+ * AgnosticStyles 0.1.12
  *
- * AgnosticCSS is a utility function that safely applies CSS styles or class changes
+ * AgnosticStyles is a utility function that safely applies CSS styles or class changes
  * to a DOM element if it exists. Logs or warns based on customizable debug flags.
  *
  * Developed by Claudio González (claudio@banshee.pro)
@@ -14,7 +14,7 @@
 let globalDebugLog = false;
 let globalDebugWarn = false;
 
-export function agnosticCSS({ debugLog = false, debugWarn = false } = {}) {
+export function agnosticStyles({ debugLog = false, debugWarn = false } = {}) {
   globalDebugLog = debugLog;
   globalDebugWarn = debugWarn;
 
@@ -22,7 +22,7 @@ export function agnosticCSS({ debugLog = false, debugWarn = false } = {}) {
     return function (elementId) {
       if (typeof elementId !== "string" || !elementId.trim()) {
         if (globalDebugWarn) {
-          console.error(`AgnosticCSS: Invalid elementId "${elementId}". It must be a non-empty string.`);
+          console.error(`AgnosticStyles: Invalid elementId "${elementId}". It must be a non-empty string.`);
         }
         return;
       }
@@ -30,7 +30,7 @@ export function agnosticCSS({ debugLog = false, debugWarn = false } = {}) {
       const element = document.getElementById(elementId);
       if (element) {
         if (globalDebugLog) {
-          console.log(`AgnosticCSS: "${elementId}" exists. Proceeding with action "${action}".`);
+          console.log(`AgnosticStyles: "${elementId}" exists. Proceeding with action "${action}".`);
         }
 
         if (action === "addClass") {
@@ -55,12 +55,12 @@ export function agnosticCSS({ debugLog = false, debugWarn = false } = {}) {
           });
         } else {
           if (globalDebugWarn) {
-            console.warn(`AgnosticCSS: Unsupported action "${action}".`);
+            console.warn(`AgnosticStyles: Unsupported action "${action}".`);
           }
         }
       } else {
         if (globalDebugWarn) {
-          console.warn(`AgnosticCSS: Element with ID "${elementId}" does not exist.`);
+          console.warn(`AgnosticStyles: Element with ID "${elementId}" does not exist.`);
         }
       }
     };

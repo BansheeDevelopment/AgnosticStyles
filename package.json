@@ -1,7 +1,7 @@
 {
-  "name": "agnosticcss",
+  "name": "agnostic-styles",
   "version": "0.1.12",
-  "description": "AgnosticCSS is a utility function that safely applies CSS styles or class changes to a DOM element if it exists. Logs or warns based on customizable debug flags.",
+  "description": "AgnosticStyles is a utility function that safely applies CSS styles or class changes to a DOM element if it exists. Logs or warns based on customizable debug flags.",
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BansheeDevelopment/AgnosticCSS.git"
+    "url": "git+https://github.com/BansheeDevelopment/AgnosticStyles.git"
   },
   "keywords": [
     "vanillajs",
@@ -18,7 +18,7 @@
     "dom-manipulation",
     "element-exists",
     "js-utility",
-    "agnosticcss",
+    "agnostic-styles",
     "safe-dom",
     "styles",
     "css",
@@ -44,7 +44,7 @@
   "author": "Banshee Development",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/BansheeDevelopment/AgnosticCSS/issues"
+    "url": "https://github.com/BansheeDevelopment/AgnosticStyles/issues"
   },
-  "homepage": "https://github.com/BansheeDevelopment/AgnosticCSS#readme"
+  "homepage": "https://github.com/BansheeDevelopment/AgnosticStyles#readme"
 }

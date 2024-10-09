@@ -7,7 +7,7 @@ AgnosticCSS is a lightweight utility that safely applies CSS styles or class cha
 To install AgnosticCSS using npm, run the following command:
 
 ```bash
-npm install agnostic-css
+npm install agnosticcss
 ```
 
 ## Usage
@@ -17,7 +17,7 @@ npm install agnostic-css
 To use AgnosticCSS, import the `agnosticCSS` function and configure it with the desired debug options.
 
 ```javascript
-import { agnosticCSS } from 'agnostic-css';
+import { agnosticCSS } from 'agnosticcss';
 
 window.agnosticCSS = agnosticCSS({ debugLog: true, debugWarn: false });
 ```

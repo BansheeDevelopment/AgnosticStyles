@@ -1,5 +1,5 @@
 {
-  "name": "agnostic-css",
+  "name": "agnosticcss",
   "version": "0.1.12",
   "description": "AgnosticCSS is a utility function that safely applies CSS styles or class changes to a DOM element if it exists. Logs or warns based on customizable debug flags.",
   "main": "index.js",
@@ -18,7 +18,7 @@
     "dom-manipulation",
     "element-exists",
     "js-utility",
-    "agnostic-css",
+    "agnosticcss",
     "safe-dom",
     "styles",
     "css",
